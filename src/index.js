@@ -1,17 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './index.css'
+import Header from './componets/Header';
+import Image from './componets/Image';
+import Description from './componets/Description';
+import Ingridients from './componets/Ingridients';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+let product = {
+  name: 'Лангустины по-Кировски',
+  image: 'Langostinos.jpg',
+  description: 'Почистить лангустина. Открыть пиво. Приятного аппетита!',
+  ingridients: [
+    {
+      name: 'лангустины',
+      quantity: '5-10 шт.'
+    },
+    {
+      name: 'соль',
+      quantity: '10-15 г.'
+    },
+    {
+      name: 'лимон',
+      quantity: '1-2 шт.'
+    }
+  ]
+}
+
+root.render(
+  <div className='wrapper'>
+    <div className='mobile-screen'>
+      <Header text = {product.name}/>
+      <Image image = {product.image}/>
+      <Description description = {product.description}/>
+      <p className='text-blue'>Необходимые ингридиенты:</p>
+      <Ingridients ingridients = {product.ingridients}/>
+    </div>
+  </div>
+);
