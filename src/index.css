@@ -20,7 +20,28 @@ div {
     margin: 10px;
 }
 .text-grey {
-    color: grey;
+    flex-direction: column;
+    color: rgb(13, 9, 235);
+    text-align: justify;
+    margin-left:  5px;
+    font-size: x-large;
+}
+
+.ingredients {
+    flex-direction: column;
+    color: rgb(13, 9, 235);
+    text-align: justify;
+    margin-left:  5px;
+    font-size: x-large;
+}
+
+.contents {
+    flex-direction: column;
+    color: brown;
     text-align: center;
     margin-left:  5px;
+    font-size: xx-large;
+}
+.text-center{
+    text-align: center;  
 }
